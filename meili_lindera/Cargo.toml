@@ -1,0 +1,32 @@
+[workspace]
+members = [
+    "lindera-core",
+    "lindera-ipadic-builder",
+    "lindera-dictionary",
+    "lindera-ipadic",
+    "lindera",
+    "lindera-cli",
+    "lindera-compress",
+    "lindera-decompress",
+    "lindera-unidic-builder",
+    "lindera-unidic",
+    "lindera-ko-dic-builder",
+    "lindera-ko-dic",
+    "lindera-cc-cedict-builder",
+    "lindera-cc-cedict",
+]
+resolver = "2"
+
+[profile.release]
+lto = true
+
+# Make sure that the build scripts and proc-macros are compiled with
+# all the optimizations. It speeds up the flate2 crate that we use in our build scripts.
+[profile.dev.build-override]
+opt-level = 3
+[profile.release.build-override]
+opt-level = 3
+[profile.bench.build-override]
+opt-level = 3
+[profile.test.build-override]
+opt-level = 3

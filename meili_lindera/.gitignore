@@ -1,0 +1,14 @@
+.vscode
+.idea
+.DS_Store
+
+target
+perf.data*
+
+Cargo.lock
+
+lindera-ipadic-*-*
+mecab-ipadic-*-*
+unidic-mecab-*_src
+mecab-ko-dic-*-*
+CC-CEDICT-MeCab-master

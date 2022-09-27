@@ -1,0 +1,33 @@
+[package]
+name = "lindera-cli"
+version = "0.17.0"
+edition = "2021"
+description = "A morphological analysis command line interface."
+documentation = "https://docs.rs/lindera-cli"
+homepage = "https://github.com/lindera-morphology/lindera"
+repository = "https://github.com/lindera-morphology/lindera"
+readme = "README.md"
+keywords = ["morphological", "analysis", "cli"]
+categories = ["text-processing"]
+license = "MIT"
+
+[features]
+default = ["ipadic"]  # ipadic is the default feature
+full = ["ipadic", "unidic", "ko-dic", "cc-cedict"]
+cjk = ["ipadic", "ko-dic", "cc-cedict"]
+ipadic = ["lindera/ipadic"]  # Japanese dictionary
+unidic = ["lindera/unidic"]  # Japanese dictionary
+ko-dic = ["lindera/ko-dic"]  # Korean dictionary
+cc-cedict = ["lindera/cc-cedict"]  # Chinese dictionary
+compress = ["lindera/compress"]
+
+[dependencies]
+anyhow = "1.0.58"
+clap = { version = "3.2.8", features = ["derive", "cargo"] }
+serde_json = "1.0.82"
+
+lindera = { version = "0.17.0", path = "../lindera" }
+
+[[bin]]
+name = "lindera"
+path = "src/main.rs"
