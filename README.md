@@ -1,5 +1,3 @@
-# meilisearch_with_korean_tokenizer
-
 # 이어드림스쿨 2기 기업연계 Project
 
 ## 회의 및 아카이빙 
@@ -17,20 +15,22 @@ https://www.notion.so/10-0be92ed65b874f2fa27c6fc0638d492d
 | 검색엔진 고도화를 위한 자연어 처리 | 메디스트림 | 형태소 분석 및 사용자 사전 적용을 통한 검색 기능 향상 (도메인 딕셔너리, mecab)|
 
 | 활용 데이터 |     데이터 입수 난이도    |      사용방법     |
-|------------------| ------ | ----- |
+|------------------| :------: | ----- |
 | 한의학 전공 서적| 하 | OCR, 전처리, mecab 사전 생성기 |
 | 온라인 한의학 사전| 하 | 다운로드, 전처리, mecab 사전 생성기 |
 | 온라인몰 컨텐츠(검색 대상) | 하 | GCP gsutil, 검색엔진에 인덱싱, 성능시험 Test-set 구축 |
 
 |  Task  |  Task 난이도  |  난이도 적용 사유  |  비고 |
-|------------------| ------ | ----- | ----- |
+|------------------| :------: | ----- | ----- |
 | 도메인 단어사전 구축 | 하 | OCR 작업 후, 정규표현식을 적용한 전처리, Mecab 사전등록 | add-userdic.sh |
-| Rust를 이용한 형태소 분석기 빌드 | 상 | Rust 언어에 대한 낮은 이해도(feat. 첫만남) | mecab의 기본 방식 적용 |
-
+| Meilisearch 이해 | 중 | "Hello, 검색엔진 world!" | IR(Information Retrieval)이 뭐죠? |
+| Rust를 이용한 형태소 분석기 빌드 | 상 | Rust 언어에 대한 낮은 이해도(feat. 첫만남) | Meilisearch는 **Rust**로 구현되어 있습니다. |
+| 검색엔진 구현 | 중 | GCP 및 AWS 인스턴스 세팅, Meilisearch에 데이터 업로드 | |
+| 평가 | 중 | 다양한 검색엔진 평가방식을 학습하고 본 프로젝트에 적절한 방식과 테스트셋을 구축 | 
 
 <br>
 
-### Machine Learning Project 
+### Search engine development project (feat. Meilisearch)
 
 ---
 
